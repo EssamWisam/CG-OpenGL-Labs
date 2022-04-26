@@ -1,0 +1,52 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "assets": {
+      "name": "assets",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "bin": {
+      "name": "bin",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "build": {
+      "name": "build",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "vendor": {
+      "name": "vendor",
+      "isOrdered": true,
+      "folders": {
+        "glad": {
+          "name": "glad",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "glfw": {
+          "name": "glfw",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "glm": {
+          "name": "glm",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    }
+  },
+  "files": {
+    "Notes": 0
+  }
+}

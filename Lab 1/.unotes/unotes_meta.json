@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "Example1": {
+      "name": "Example1",
+      "isOrdered": true,
+      "folders": {
+        "vendor": {
+          "name": "vendor",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "bin": {
+          "name": "bin",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "build": {
+          "name": "build",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {
+        "Pipeline": 0
+      }
+    }
+  },
+  "files": {
+    "Notes": 0
+  }
+}
