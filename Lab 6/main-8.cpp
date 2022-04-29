@@ -165,7 +165,7 @@ int main(int, char**) {
     glGenSamplers(1, &sampler);
     glSamplerParameteri(sampler, GL_TEXTURE_MAG_FILTER, GL_NEAREST);        
     //* 2 - Smooth things out by using a different minification parameter (GL_NEAREST_MIPMAP_LINEAR)
-    glSamplerParameteri(sampler, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);      //<----- uncomment me      
+    glSamplerParameteri(sampler, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);        
    
 
     

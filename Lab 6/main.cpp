@@ -70,14 +70,14 @@
       #include "main-8.cpp"            // 75 < time < 87
       //* This time we let the range be from (0,0) to (20,20) -> texture gets repeated 400 times in the square
       //* It can be observed at this point that its using different mipmaps for points in the object that are farther away?
-      //! But how?                                                            # decrypting in progress.
+      //! But how?                                                           
       // Fragment shader considers 4 fragments at a time (what the GPU does) 
       // frag_color = texture(tex_sampler, vertex_tex_coord); exploits the fact by computing 
       // discrete partial derivatives (difference) along the x and y texture coordinates (consider vertex above and to the right)
-      // if the difference is large (e.g. (3,5) and (3, 15)) -> need a larger level of detail
-      // so we need a larger mipmap
+      // if the difference is large (e.g. beyond texture size) -> will clearly need to repeat (more the larger the difference)
+      // i.e. need a larger level of detail = a lower miplevel resolution
 
-      // Note that this implies that its essential that texture() is called for all fragments.
+      //!Note that this implies that its essential that texture() is called for all fragments.
       // i.e. do not put it in an if condition (compute then decide whether or not you'll use the result)
      
 
