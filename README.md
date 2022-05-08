@@ -1,4 +1,4 @@
-# CG-OpenGL-Labs
+# CG-OpenGL-Labs 
 Simply a repo for self-explanatory OpenGL labs as taught by Eng. Yehia.
 
 🚅 VSCode extensions you'll need are BetterComments and ᑌᑎotes Remark - Markdown WYSIWYG.
@@ -18,3 +18,16 @@ Side notes:
 2 - Lab 4 is foundational for all further labs.
 
 3 - In lab 4, the code to draw is slightly modified (to become more intuitive) and then encapsulated in a function. (will be used in all further labs.)
+
+4 - Sometimes a small part in the beginning of a lab (e.g. lab 5) is rather introduced in the previous lab.
+
+Finally,
+
+╔════╦╗░░░░░░░╔╗░░╔╗░░╔╗░░░░░╔════╗░░░░░░╔╗░░
+║╔╗╔╗║║░░░░░░░║║░░║╚╗╔╝║░░░░░║╔╗╔╗║░░░░░░║║░░
+╚╝║║╚╣╚═╦══╦═╗║║╔╗╚╗╚╝╔╩═╦╗╔╗╚╝║║╠╩═╦═╦══╣║╔╗
+░░║║░║╔╗║╔╗║╔╗╣╚╝╝░╚╗╔╣╔╗║║║║░░║║║╔╗║╔╣║═╣╚╝╝
+░░║║░║║║║╔╗║║║║╔╗╗░░║║║╚╝║╚╝║░░║║║╔╗║║║║═╣╔╗╗
+░░╚╝░╚╝╚╩╝╚╩╝╚╩╝╚╝░░╚╝╚══╩══╝░░╚╝╚╝╚╩╝╚══╩╝╚╝
+
+For being there when I needed help due to compatibility issues or other.
