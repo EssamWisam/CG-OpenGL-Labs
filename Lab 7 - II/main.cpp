@@ -123,11 +123,8 @@
 
 
         // Sidenotes:
-        // We can achieve multipoication of colors by setting F_src = C_dst, F_dst = 0 (in this case depth order doesn't matter)
+        // We can achieve multiplication of colors by setting F_src = C_dst, F_dst = 0 (in this case depth order doesn't matter)
         // We're ready to finish phase 2 at this point and missing one lighting lab for phase 3.
-
-
-
 
    #endif
 

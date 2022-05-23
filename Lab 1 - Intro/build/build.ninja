@@ -1,0 +1,414 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Example1
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/build/
+# =============================================================================
+# Object build statements for EXECUTABLE target Example1
+
+
+#############################################
+# Order-only phony target for Example1
+
+build cmake_object_order_depends_target_Example1: phony || cmake_object_order_depends_target_glfw
+
+build CMakeFiles/Example1.dir/main.cpp.o: CXX_COMPILER__Example1_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/main.cpp || cmake_object_order_depends_target_Example1
+  DEP_FILE = CMakeFiles/Example1.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glad/include"
+  OBJECT_DIR = CMakeFiles/Example1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Example1.dir
+  TARGET_COMPILE_PDB = CMakeFiles/Example1.dir/
+  TARGET_PDB = ../bin/Example1.pdb
+
+build CMakeFiles/Example1.dir/vendor/glad/src/gl.c.o: C_COMPILER__Example1_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glad/src/gl.c || cmake_object_order_depends_target_Example1
+  DEP_FILE = CMakeFiles/Example1.dir/vendor/glad/src/gl.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glad/include"
+  OBJECT_DIR = CMakeFiles/Example1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Example1.dir/vendor/glad/src
+  TARGET_COMPILE_PDB = CMakeFiles/Example1.dir/
+  TARGET_PDB = ../bin/Example1.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Example1
+
+
+#############################################
+# Link the executable ../bin/Example1
+
+build ../bin/Example1: CXX_EXECUTABLE_LINKER__Example1_Debug CMakeFiles/Example1.dir/main.cpp.o CMakeFiles/Example1.dir/vendor/glad/src/gl.c.o | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  LINK_LIBRARIES = vendor/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
+  OBJECT_DIR = CMakeFiles/Example1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/Example1.dir/
+  TARGET_FILE = ../bin/Example1
+  TARGET_PDB = ../bin/Example1.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build" && /Applications/CMake.app/Contents/bin/ccmake -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build" && /Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build vendor/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw" && /Applications/CMake.app/Contents/bin/ccmake -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build vendor/glfw/edit_cache: phony vendor/glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build vendor/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw" && /Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build vendor/glfw/rebuild_cache: phony vendor/glfw/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 1$ -$ Intro/vendor/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library vendor/glfw/src/libglfw3.a
+
+build vendor/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = vendor/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_FILE = vendor/glfw/src/libglfw3.a
+  TARGET_PDB = vendor/glfw/src/libglfw3.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build vendor/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src" && /Applications/CMake.app/Contents/bin/ccmake -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build vendor/glfw/src/edit_cache: phony vendor/glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build vendor/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src" && /Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build vendor/glfw/src/rebuild_cache: phony vendor/glfw/src/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build Example1: phony ../bin/Example1
+
+build glfw: phony vendor/glfw/src/libglfw3.a
+
+build libglfw3.a: phony vendor/glfw/src/libglfw3.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build
+
+build all: phony ../bin/Example1 vendor/glfw/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw
+
+build vendor/glfw/all: phony vendor/glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 1 - Intro/build/vendor/glfw/src
+
+build vendor/glfw/src/all: phony vendor/glfw/src/libglfw3.a
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../vendor/glfw/CMakeLists.txt ../vendor/glfw/src/CMakeLists.txt ../vendor/glfw/src/glfw3.pc.in ../vendor/glfw/src/glfw3Config.cmake.in ../vendor/glfw/src/glfw_config.h.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeNinjaFindMake.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.c.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../vendor/glfw/CMakeLists.txt ../vendor/glfw/src/CMakeLists.txt ../vendor/glfw/src/glfw3.pc.in ../vendor/glfw/src/glfw3Config.cmake.in ../vendor/glfw/src/glfw_config.h.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCCompilerABI.c /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeNinjaFindMake.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystem.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.c.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

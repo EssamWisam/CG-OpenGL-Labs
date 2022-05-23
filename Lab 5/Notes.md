@@ -76,7 +76,7 @@
 **5 - More Notes**
 `More Notes)`
 
-`Transform camera by translation to the right has same effect as transforming whole world to the left (inverse transformation.) `
+`Transform camera by translation to the right has same effect as transforming whole world to the left (inverse transformation.)`
 `In the scene graph, we may write a function that transforms the local space of the object (whatever it is) to the world space. For the camera object this would give them "camera space to world space transformation matrix". Now since we know `
 `that later we will need to transform all objects to the camera space we can derive the corresponding matrix easily by `
 `taking the inverse of camera to world matrix to get a matrix that takes us from world space to camera space and then apply it on all.(Thus, Mcam in the slides is the inverse of Mcam in the lecture).`

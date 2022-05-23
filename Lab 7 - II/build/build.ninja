@@ -48,14 +48,14 @@ build cmake_object_order_depends_target_Example7: phony || cmake_object_order_de
 
 build CMakeFiles/Example7.dir/main.cpp.o: CXX_COMPILER__Example7_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/main.cpp || cmake_object_order_depends_target_Example7
   DEP_FILE = CMakeFiles/Example7.dir/main.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glad/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glm"
   OBJECT_DIR = CMakeFiles/Example7.dir
   OBJECT_FILE_DIR = CMakeFiles/Example7.dir
 
 build CMakeFiles/Example7.dir/vendor/glad/src/gl.c.o: C_COMPILER__Example7_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glad/src/gl.c || cmake_object_order_depends_target_Example7
   DEP_FILE = CMakeFiles/Example7.dir/vendor/glad/src/gl.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glad/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glm"
   OBJECT_DIR = CMakeFiles/Example7.dir
   OBJECT_FILE_DIR = CMakeFiles/Example7.dir/vendor/glad/src
@@ -69,7 +69,7 @@ build CMakeFiles/Example7.dir/vendor/glad/src/gl.c.o: C_COMPILER__Example7_Debug
 # Link the executable ../bin/Example7
 
 build ../bin/Example7: CXX_EXECUTABLE_LINKER__Example7_Debug CMakeFiles/Example7.dir/main.cpp.o CMakeFiles/Example7.dir/vendor/glad/src/gl.c.o | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6
   LINK_LIBRARIES = vendor/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
   OBJECT_DIR = CMakeFiles/Example7.dir
   POST_BUILD = :
@@ -147,7 +147,7 @@ build cmake_object_order_depends_target_glfw: phony || vendor/glfw/src/CMakeFile
 build vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -155,7 +155,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug /U
 build vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -163,7 +163,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /User
 build vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -171,7 +171,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Use
 build vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -179,7 +179,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /U
 build vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -187,7 +187,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /Us
 build vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -195,7 +195,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Us
 build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -203,7 +203,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug
 build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -211,7 +211,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_D
 build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -219,7 +219,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_De
 build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -227,7 +227,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Deb
 build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -235,7 +235,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_Debug
 build vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -243,7 +243,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Deb
 build vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -251,7 +251,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Deb
 build vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -259,7 +259,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debu
 build vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 7$ -$ II/vendor/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
   DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  FLAGS = -g -arch arm64 -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
   INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 7 - II/build/vendor/glfw/src"
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
@@ -273,7 +273,7 @@ build vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_D
 # Link the static library vendor/glfw/src/libglfw3.a
 
 build vendor/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -mmacosx-version-min=11.6
+  ARCH_FLAGS = -arch arm64 -mmacosx-version-min=11.6
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
   POST_BUILD = :

@@ -178,7 +178,6 @@ int main(int, char**) {
     // means we will need to sample colors from it. There are many sampling parameters involved
     // that it stores as well (more on this later.)
 
-
    
     //__________________________________}
    

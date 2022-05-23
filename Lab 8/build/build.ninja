@@ -1,0 +1,385 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Example8
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/build/
+# =============================================================================
+# Object build statements for EXECUTABLE target Example8
+
+
+#############################################
+# Order-only phony target for Example8
+
+build cmake_object_order_depends_target_Example8: phony || cmake_object_order_depends_target_glfw
+
+build CMakeFiles/Example8.dir/main.cpp.o: CXX_COMPILER__Example8_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/main.cpp || cmake_object_order_depends_target_Example8
+  DEP_FILE = CMakeFiles/Example8.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu++17
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glad/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glm" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/utils"
+  OBJECT_DIR = CMakeFiles/Example8.dir
+  OBJECT_FILE_DIR = CMakeFiles/Example8.dir
+
+build CMakeFiles/Example8.dir/utils.cpp.o: CXX_COMPILER__Example8_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/utils.cpp || cmake_object_order_depends_target_Example8
+  DEP_FILE = CMakeFiles/Example8.dir/utils.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu++17
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glad/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glm" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/utils"
+  OBJECT_DIR = CMakeFiles/Example8.dir
+  OBJECT_FILE_DIR = CMakeFiles/Example8.dir
+
+build CMakeFiles/Example8.dir/vendor/glad/src/gl.c.o: C_COMPILER__Example8_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glad/src/gl.c || cmake_object_order_depends_target_Example8
+  DEP_FILE = CMakeFiles/Example8.dir/vendor/glad/src/gl.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glad/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glm" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/utils"
+  OBJECT_DIR = CMakeFiles/Example8.dir
+  OBJECT_FILE_DIR = CMakeFiles/Example8.dir/vendor/glad/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Example8
+
+
+#############################################
+# Link the executable ../bin/Example8
+
+build ../bin/Example8: CXX_EXECUTABLE_LINKER__Example8_Debug CMakeFiles/Example8.dir/main.cpp.o CMakeFiles/Example8.dir/utils.cpp.o CMakeFiles/Example8.dir/vendor/glad/src/gl.c.o | vendor/glfw/src/libglfw3.a || vendor/glfw/src/libglfw3.a
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
+  LINK_LIBRARIES = vendor/glfw/src/libglfw3.a  -framework Cocoa  -framework IOKit  -framework CoreFoundation
+  OBJECT_DIR = CMakeFiles/Example8.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ../bin/Example8
+  TARGET_PDB = Example8.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build" && /Applications/CMake.app/Contents/bin/ccmake -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build" && /Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for edit_cache
+
+build vendor/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw" && /Applications/CMake.app/Contents/bin/ccmake -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build vendor/glfw/edit_cache: phony vendor/glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build vendor/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw" && /Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build vendor/glfw/rebuild_cache: phony vendor/glfw/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/vulkan.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/cocoa_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/cocoa_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/posix_thread.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/egl_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+build vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Debug /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab$ 8/vendor/glfw/src/osmesa_context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -D_GLFW_USE_CONFIG_H
+  DEP_FILE = vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fPIC -Wall -std=gnu99 -Wdeclaration-after-statement
+  INCLUDES = -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/include" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/vendor/glfw/src" -I"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src"
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library vendor/glfw/src/libglfw3.a
+
+build vendor/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = vendor/glfw/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = vendor/glfw/src/libglfw3.a
+  TARGET_PDB = glfw3.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build vendor/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src" && /Applications/CMake.app/Contents/bin/ccmake -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build"
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build vendor/glfw/src/edit_cache: phony vendor/glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build vendor/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src" && /Applications/CMake.app/Contents/bin/cmake --regenerate-during-build -S"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8" -B"/Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build vendor/glfw/src/rebuild_cache: phony vendor/glfw/src/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build Example8: phony ../bin/Example8
+
+build glfw: phony vendor/glfw/src/libglfw3.a
+
+build libglfw3.a: phony vendor/glfw/src/libglfw3.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build
+
+build all: phony ../bin/Example8 vendor/glfw/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw
+
+build vendor/glfw/all: phony vendor/glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/essam/Documents/GitHub/CG-OpenGL-Labs/Lab 8/build/vendor/glfw/src
+
+build vendor/glfw/src/all: phony vendor/glfw/src/libglfw3.a
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../vendor/glfw/CMakeLists.txt ../vendor/glfw/src/CMakeLists.txt ../vendor/glfw/src/glfw3.pc.in ../vendor/glfw/src/glfw3Config.cmake.in ../vendor/glfw/src/glfw_config.h.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../vendor/glfw/CMakeLists.txt ../vendor/glfw/src/CMakeLists.txt ../vendor/glfw/src/glfw3.pc.in ../vendor/glfw/src/glfw3Config.cmake.in ../vendor/glfw/src/glfw_config.h.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeDependentOption.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakePackageConfigHelpers.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/GNUInstallDirs.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /Applications/CMake.app/Contents/share/cmake-3.23/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.23.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.23.0-rc2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
