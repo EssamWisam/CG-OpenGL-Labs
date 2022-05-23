@@ -1,13 +1,13 @@
 # CG-OpenGL-Labs 
 Simply a repo for self-explanatory OpenGL labs as taught by Eng. Yehia.
 
-🚅 VSCode extensions you'll need are BetterComments and ᑌᑎotes Remark - Markdown WYSIWYG.
+🚅 VSCode extensions you'll need are BetterComments (used very extensively) and ᑌᑎotes Remark - Markdown WYSIWYG (sometimes used).
 
 ❇️ Whenever there's a markdown file read it first using Unotes (Lab 1 and Lab 5)
 
 ❇️ Starting from lab 1 whatever is new in the next lab is enclosed within //{_______ and //_________} 
 
-❇️ In labs 6 and 7 many changes were undergone through the tutorial, thus you'll find many main files. Start by openning main.cpp 
+❇️ In labs 6 and 7 and 8 many changes were undergone through the tutorial, thus you'll find many main files. Start by openning main.cpp 
 there you'll be able to change the value of a variable run to choose different mains (each associated with an interval within the tutorial's time.) Before
 reading the commends within each of the main files, read what's written under the #include in main.cpp
 
