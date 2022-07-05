@@ -79,8 +79,6 @@
 
       //!Note that this implies that its essential that texture() is called for all fragments.
       // i.e. do not put it in an if condition (compute then decide whether or not you'll use the result)
-     
-
       
    #endif
 

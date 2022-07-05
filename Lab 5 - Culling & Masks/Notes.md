@@ -65,6 +65,7 @@
 `glScissor for first section`
 `clear (now it will respect the section)`
 `draw`
+`glViewPort for second section`
 `glScissor for second section`
 `clear (now it will respect the section)`
 `draw`

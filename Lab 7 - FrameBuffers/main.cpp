@@ -60,7 +60,7 @@
 
       #include "main-3.cpp"     
       //* Recall that in main-1 an unjustified change we did was make the minification filter parameter
-      //* be GL_Nearest from GL_NEAREST_MIPMAP_LINEAR <-  Note that in the render loop were' using same sampler for both textures
+      //* be GL_Nearest from GL_NEAREST_MIPMAP_LINEAR[about choosing mipmaps] <-  Note that in the render loop were' using same sampler for both textures
       //* We did this since later for renderTarget we specified only one mip-level but GL_NEAREST_MIPMAP_LINEAR
       //* chooses the two mipmaps that most closely match the textured pixel....
       //! So it's either that the API will handle it using just 1 mip-level (probably in an unexpected way)

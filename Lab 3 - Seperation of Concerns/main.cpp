@@ -108,6 +108,14 @@ Vertex vertices[] = {
     // to use 0->255 for the colors need to set normalize to true.
     
 
+    //* Routine:
+    // 1 - Generate and bind vertex array.
+    // 2 - Generate and bind vertex buffer then put attribute data
+    // 3 - EnableVertexAttribute then vertexAttribPointer(loc, no. of components, normalize, jump, stride)
+    // 4 - layout(location=loc) in vec3 attribute; in the vertex shader  
+    // 5 - Generate and bind elements buffer then put element data
+
+
     //* Indexed Drawing.
     // allows us to use the same vertex for different shapes.
     // this is the general case (vertices are shared as in triangles forming a mesh)

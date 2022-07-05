@@ -1,0 +1,21 @@
+# ninja log v5
+8	270	1653251404060567000	vendor/glfw/src/libglfw3.a	191f16250171b75
+1050	2225	1653251373457795866	vendor/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o	9a1879a240c1bfb8
+967	2275	1653251373499398288	vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o	ea466537a29dfc5
+8	927	1653251372142207652	vendor/glfw/src/CMakeFiles/glfw.dir/context.c.o	edf59bd68dad2299
+973	2304	1653251373540431253	vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o	873993d708067e87
+8	1542	1653251372775336680	CMakeFiles/Example8.dir/vendor/glad/src/gl.c.o	30e437f986fa5d9b
+1012	1786	1653251373022691135	vendor/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o	6fe40b8e6dfa4c35
+8	973	1653251372195316845	vendor/glfw/src/CMakeFiles/glfw.dir/init.c.o	b8ca246cb5fc236
+975	1706	1653251372939568207	vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o	f38e60c4940c9787
+866	1057	1653305225181327414	../bin/Example8	7470f6309dc25a
+1461	2067	1653251373301927990	vendor/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o	6fd929ed4ca94d05
+1542	2089	1653251373327027818	vendor/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o	d01bf7802686d71
+931	2279	1653251373512851638	vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o	c07d99f7a1cdebd6
+9	967	1653251372188993773	vendor/glfw/src/CMakeFiles/glfw.dir/monitor.c.o	b1f76095dbde2384
+14	1461	1653251372687137219	vendor/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o	6d0d1913385b77c8
+9	1049	1653251372284385387	vendor/glfw/src/CMakeFiles/glfw.dir/input.c.o	1e704e4e81019598
+10	974	1653251372191340685	vendor/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o	957589736048bb85
+13	1012	1653251372243513630	vendor/glfw/src/CMakeFiles/glfw.dir/window.c.o	a85107affeedaba1
+8	865	1653305224984932813	CMakeFiles/Example8.dir/main.cpp.o	23a4cda6a721a6fd
+8	3347	1653251374583095268	CMakeFiles/Example8.dir/utils.cpp.o	ef32771aa0ef38a6

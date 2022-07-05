@@ -23,7 +23,7 @@ void main(){
     // line below is executed for each vertex (gl_VertexID=0,1,2)
     gl_Position = (isAnimated==0)? vec4(positions[gl_VertexID], 1.0) : vec4(positions[gl_VertexID] * sin(time) * exp(0.1*time) , 1.0);
 
-    // Last one is the homogenous coordinate, check lecture for why we need it (.
+    // Last one is the homogenous coordinate, check lecture for why we need it.
     
     // Assigning a color to each vertex
     vColor = colors[gl_VertexID]; 

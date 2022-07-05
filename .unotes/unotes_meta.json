@@ -1,0 +1,200 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "Lab 1 - Intro": {
+      "name": "Lab 1 - Intro",
+      "isOrdered": true,
+      "folders": {
+        "bin": {
+          "name": "bin",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "build": {
+          "name": "build",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "vendor": {
+          "name": "vendor",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {
+        "Pipeline": 0,
+        "Notes": 1
+      }
+    },
+    "Lab 2": {
+      "name": "Lab 2",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Lab 3": {
+      "name": "Lab 3",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Lab 4": {
+      "name": "Lab 4",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Lab 5": {
+      "name": "Lab 5",
+      "isOrdered": true,
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "bin": {
+          "name": "bin",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "build": {
+          "name": "build",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "vendor": {
+          "name": "vendor",
+          "isOrdered": true,
+          "folders": {
+            "glad": {
+              "name": "glad",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "glfw": {
+              "name": "glfw",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "glm": {
+              "name": "glm",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            }
+          },
+          "files": {}
+        }
+      },
+      "files": {
+        "Notes": 0
+      }
+    },
+    "Lab 6": {
+      "name": "Lab 6",
+      "isOrdered": true,
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "bin": {
+          "name": "bin",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "build": {
+          "name": "build",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "vendor": {
+          "name": "vendor",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    },
+    "Lab 7 - I": {
+      "name": "Lab 7 - I",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Lab 7 - II": {
+      "name": "Lab 7 - II",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "Lab 8": {
+      "name": "Lab 8",
+      "isOrdered": true,
+      "folders": {
+        "assets": {
+          "name": "assets",
+          "isOrdered": true,
+          "folders": {
+            "images": {
+              "name": "images",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "models": {
+              "name": "models",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            },
+            "shaders": {
+              "name": "shaders",
+              "isOrdered": true,
+              "folders": {},
+              "files": {}
+            }
+          },
+          "files": {}
+        },
+        "bin": {
+          "name": "bin",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "build": {
+          "name": "build",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "vendor": {
+          "name": "vendor",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    }
+  },
+  "files": {
+    "README": 0
+  }
+}

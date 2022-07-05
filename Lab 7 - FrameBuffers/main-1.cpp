@@ -202,7 +202,7 @@ int main(int, char**) {
         // Binding the frame buffer object -> off-screen rendering on texture
         // That is, all draw calls will draw here (not on the screen) until we bind the default FB (2nd pass)
         glViewport(0, 0, RT_W, RT_H);
-        // Set the view port according to the texture's size (we're rendering on it.
+        // Set the view port according to the texture's size (we're rendering on it).
         //! Try RT_W/4, RT_H/4 then try W, H or equivalently removing it.
         // ______________________________________________________________}
 

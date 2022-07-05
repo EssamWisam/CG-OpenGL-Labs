@@ -109,9 +109,18 @@ int main(int, char**) {
     };
 
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6*sizeof(uint16_t), elements, GL_STATIC_DRAW);
+
+    //* Routine:
+    // 1 - Generate and bind vertex array.
+    // 2 - Generate and bind vertex buffer then put attribute data
+    // 3 - EnableVertexAttribute then vertexAttribPointer(loc, no. of components, normalize, jump, stride)
+    // 4 - layout(location=loc) in vec3 attribute; <-----in the vertex shader  
+    // 5 - Generate and bind elements buffer then put element data
+    // 6 - glDrawElements()
    
 
     //* 5 - Solving the depth problem (comment the 3 lines that have to do with depth to see it first)
+    // The order in which the squares are rendered (in the for loop) is what controls which is in the front (last one survives always)
     glEnable(GL_DEPTH_TEST);            // Now fragments passing the depth test will be stored in the depth buffer.
     glDepthFunc(GL_LESS);               // closer fragments to camera (smaller z) are those passing the depth test.
 
